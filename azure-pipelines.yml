@@ -14,6 +14,7 @@ steps:
     provider: 'azurerm'
     command: 'init'
     backendAzureRmResourceGroupName: 'jonnychipz-infra'
+    backendServiceArm: 'tf backend details'
     backendAzureRmStorageAccountName: 'jonnychipztstate12s'
     backendAzureRmContainerName: 'tstate'
     backendAzureRmKey: 'container1'
