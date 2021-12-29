@@ -9,7 +9,11 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-- task: TerraformCLI@0
+- task: TerraformTaskV2@2
   inputs:
-    command: 'validate'
-    allowTelemetryCollection: true
+    provider: 'azurerm'
+    command: 'init'
+    backendAzureRmResourceGroupName: 'jonnychipz-infra'
+    backendAzureRmStorageAccountName: 'jonnychipztstate12s'
+    backendAzureRmContainerName: 'tstate'
+    backendAzureRmKey: 'container1'
